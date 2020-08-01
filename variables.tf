@@ -18,27 +18,14 @@ variable "cluster_name" {
     default = "saturno"
 }
 
-variable "default_node_preemtible" {
-    type = bool
-    default = true
-}
-
-variable "default_node_type" {
-    type = string
-    default = "e2-medium"
-}
-
-variable "default_node_count" {
-    type = number
-    default = 1
-}
-
-variable "default_node_disk_type" {
-    type = string
-    default = "pd-standard"
-}
-
-variable "default_node_disk_size" {
-    type = number
-    default = 120
+variable "default_node" {
+    default = {
+        preemtible = true
+        type = "e2-medium"
+        count = 1
+        disk = {
+            type = "pd-standard"
+            size = 120
+        }
+    }
 }
