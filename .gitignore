@@ -1,0 +1,3 @@
+*.tfstate*
+account.json
+.terraform
