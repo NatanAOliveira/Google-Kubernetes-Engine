@@ -9,7 +9,7 @@ resource "google_container_cluster" "gke_cluster" {
   location = var.region
 
   remove_default_node_pool = true
-  initial_node_count       = 0
+  initial_node_count       = 1
 
   master_auth {
     username = ""
